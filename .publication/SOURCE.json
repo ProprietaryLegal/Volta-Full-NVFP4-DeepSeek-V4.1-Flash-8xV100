@@ -1,0 +1,563 @@
+{
+ "name": "Volta Full NVFP4",
+ "repository": "https://github.com/ProprietaryLegal/Volta-Full-NVFP4-DeepSeek-V4.1-Flash-8xV100",
+ "assembled": "2026-11-10",
+ "source": "Volta Max uPLIft, release commit 79dc164 (git archive), with the files below rewritten",
+ "assembler": "build_full.py (79dc164 minus the removed files, plus the authored files)",
+ "files": [
+  {
+   "path": ".gitignore",
+   "kind": "unchanged from 79dc164",
+   "sha256": "87b9e994533f4a3c13713e9bc77837b9fac5cc582a0f39849d36c102b225fc8d",
+   "bytes": 127
+  },
+  {
+   "path": "CHANGELOG.md",
+   "kind": "rewritten for this repository from 79dc164",
+   "sha256": "c5972d11fc5e01834e9441fcb0f45bbeddd839d5cdbc688a652f7f5ef3bd9595",
+   "bytes": 1175,
+   "base_sha256": "02aaaf85137fb7ee790a0f4b5290c8ad3fd09d0f43997aa64cbe3191bba5830c"
+  },
+  {
+   "path": "CONTRIBUTING.md",
+   "kind": "rewritten for this repository from 79dc164",
+   "sha256": "0d0d95d0d987095c7a7eba3f1f5d49e8b73822a92a431e369644cab93fd1159b",
+   "bytes": 1989,
+   "base_sha256": "2f1cc207fd785229dfff691f124c649f97aa7cd7d58157812b3cd4f3decade3c"
+  },
+  {
+   "path": "CREDITS.md",
+   "kind": "rewritten for this repository from 79dc164",
+   "sha256": "a069117007895ac9311e15bdaadc507d618d735824a2823603a37f3ee4d52484",
+   "bytes": 3771,
+   "base_sha256": "879555be296105d8b239d5d1ebc651f560ce7b5572c9380bb8dc26173167032d"
+  },
+  {
+   "path": "LICENSE",
+   "kind": "unchanged from 79dc164",
+   "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "bytes": 11358
+  },
+  {
+   "path": "LICENSES/Apache-2.0.txt",
+   "kind": "unchanged from 79dc164",
+   "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "bytes": 11358
+  },
+  {
+   "path": "NOTICE",
+   "kind": "rewritten for this repository from 79dc164",
+   "sha256": "82092405436bb4d571665c862605d394e1d32cd7e2340eddaafdaa39e38b8ad5",
+   "bytes": 1085,
+   "base_sha256": "26ad00d4bfa79cb52c2b24dfe8490cbc86d73bd324f5859acc09f9cfc20153d7"
+  },
+  {
+   "path": "README.md",
+   "kind": "rewritten for this repository from 79dc164",
+   "sha256": "f6eea2a6ee0cb39658bd797c0e2d7596d85cbefa01e9e830bc13710ed3855ae2",
+   "bytes": 24509,
+   "base_sha256": "fb12ff917a4778da80a23d98f66de923dc51b5495dcb31661763862296dae216"
+  },
+  {
+   "path": "SECURITY.md",
+   "kind": "unchanged from 79dc164",
+   "sha256": "692c958aaa605b2621f1c4b0b7c662aa7b3c67353dca7738ab2998c9a3061acb",
+   "bytes": 598
+  },
+  {
+   "path": "docs/README.md",
+   "kind": "rewritten for this repository from 79dc164",
+   "sha256": "aeb4c4845e35964241ebdb91049c1daa6a157922b2cb8df6ef79bea3b34bfca1",
+   "bytes": 1000,
+   "base_sha256": "0d3de5e1d87c87a8ba0c9f50e0a9cc13b67247838275327bac18844ee91edb43"
+  },
+  {
+   "path": "docs/measurements.md",
+   "kind": "rewritten for this repository from 79dc164",
+   "sha256": "5475aea91ae3b44a2f22da88e0b3159af6426830cacea23009d7fa6f2dee3931",
+   "bytes": 10032,
+   "base_sha256": "8047eeeaaec8f17564d1ab25711901a7707543fd2478da556a562db04999e20c"
+  },
+  {
+   "path": "engine/README.md",
+   "kind": "rewritten for this repository from 79dc164",
+   "sha256": "aebfaaab30b557a9717f6c0099c92ee57c649f82ab7767e93cfd1988bad65e19",
+   "bytes": 3801,
+   "base_sha256": "188bb8112006522167776843198d477dabc8643c221ddaddf06c5891d89234ab"
+  },
+  {
+   "path": "engine/configs/env.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "404c7d5a8ab393654e659fe5e26182bfdae41816f502590c38152dfb1944b912",
+   "bytes": 1423
+  },
+  {
+   "path": "engine/configs/run_serve.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "371141d124957d0792595af6e1d8a155689db49b0d589f522cd518db07d3429a",
+   "bytes": 4600
+  },
+  {
+   "path": "engine/configs/serve-nvfp4-pp2.yaml",
+   "kind": "unchanged from 79dc164",
+   "sha256": "b1dda56a6565e8667d16231978d26f0f342b275c466603a347df5b714591cdec",
+   "bytes": 3795
+  },
+  {
+   "path": "engine/patches/deepseek_v41_engram_io.patch",
+   "kind": "unchanged from 79dc164",
+   "sha256": "e9d534a3376722bb60f9cd7d6ec3b44721051ed7c35bf5932b8db438b15fd978",
+   "bytes": 6730
+  },
+  {
+   "path": "engine/patches/gguf_loader.patch",
+   "kind": "unchanged from 79dc164",
+   "sha256": "245d3f59b7c9bdf3f15514d8dcbe3db8ebed5e27f98f16cfebe74abb184c6c1c",
+   "bytes": 11980
+  },
+  {
+   "path": "engine/patches/gguf_moe.patch",
+   "kind": "unchanged from 79dc164",
+   "sha256": "7f67f631bce7d7edd42377e60912361cc05f0fb9769b8a8eda2f015215995464",
+   "bytes": 3794
+  },
+  {
+   "path": "engine/src/vllm/model_executor/layers/fused_moe/experts/nvfp4_8r_native.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "ba640493427bab091a1d26f140808330ca5e110a79fa085de9d6ca1b53dd7d90",
+   "bytes": 62572
+  },
+  {
+   "path": "engine/src/vllm/model_executor/layers/fused_moe/experts/nvfp4_8r_tiers.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "f0c68ec68dcc75929b12c76351e115d157b48c8c1224d3a4069b0c8bcefceb0e",
+   "bytes": 11955
+  },
+  {
+   "path": "harness/README.md",
+   "kind": "unchanged from 79dc164",
+   "sha256": "fa8f5a0283def0f5c82ae603c4847103dacb6f535c6b1cb6e3e875e156e2ade6",
+   "bytes": 4608
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/__init__.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "bab8fb78a81a2004dfbe4ee2810fd4abb0c5d9fda8085015bc7207367c62a2ac",
+   "bytes": 76
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/accept_p1.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "88bde71bf955bade547d6be9c0733096e59b1fe9b3be2ac322374b29e0cc3360",
+   "bytes": 11584
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/accept_p2.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "9c5babb99a54bc333b9cd3883f04bfe023b5be5c718f4e8b122450ab5ac8edf2",
+   "bytes": 8035
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/accept_p3_layer.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "9a35ebbe0107eecf5873d1bec9a7f2d68c1b88882d917b880257b90d9cca04c4",
+   "bytes": 10154
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/accept_p4.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "c90bc3f5ed23a429bb5947475f997ded31a13bdbb4d40a82402920747cb3a014",
+   "bytes": 4296
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/accept_t3_layer.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "1faf2e4e09e47b04577fcf3562f05a7e34a3fc1e800d3f80f54b54b772afa9dd",
+   "bytes": 12695
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/accept_t3_stage.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "1896a388c91560b537090470cbc1143a222aee0bfeaf13ee993d8291c924f421",
+   "bytes": 7274
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/bench_p3_miss_paths.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "57e49085ab4c9c01649a8e33ac28dc3bcc27f944bd4ddc7241d925ec658af618",
+   "bytes": 8263
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/build_packs.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "e8a123eeddaf961d0f3da70d281c657888cf4c6e55ac2b581b17897a8e650bb1",
+   "bytes": 13180
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/check_engram_mxfp4_file.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "bb377a84847b4660e44b90e149225a9a6b329bf91709c08da63625266abcb609",
+   "bytes": 2546
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/check_p5_paths.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "70dcbbcb8d2aa2595605f6ba09afd57cc7e674a5e4242f89f16d6189498485ac",
+   "bytes": 4106
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/copy_gguf.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "38f06132964258718c0fa1ab40dcc0cda640886e56e9fca3547587f2d41234ab",
+   "bytes": 648
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/copy_p5_assets.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "4bc779a7881b5577bd5bad3d6c3050b44e52d00700cc9918b9df88be7c336382",
+   "bytes": 1833
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/cpu_moe.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "00d1cd6a57a2bc137ac5215e3408f6d3c3a0994534a8fd5d7f86bb15bd8f23d5",
+   "bytes": 2133
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/cpu_mxfp4_moe.c",
+   "kind": "unchanged from 79dc164",
+   "sha256": "2c14487e7bc15ce366e1e20a777b9535c6f4e2b1fb0efdfc58ee9cf567c82454",
+   "bytes": 4450
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/estimate_round.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "6bf5e1ce6613356638c5764e6640c29f6b9a1028d0601c22bce2875a81ac0c07",
+   "bytes": 4989
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/falsify_f_iq_prefill.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "e2f68c86c7151a9c8e3ce492556342e487a31253c9f79465c323932b45561d7c",
+   "bytes": 9365
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/falsify_t3_iq_drop.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "48d0887254527425e02942a99f30c086ae13de3a70fcfa661af08c0fd0b01898",
+   "bytes": 14291
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/make_f_prefill_refs.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "41101eeea5f312fdd1c0b376ce4f096f2e32f578a37471d6d169698d3d3a3d9f",
+   "bytes": 5357
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/make_p2_refs.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "2cbb6c9945bc4a5b44920ffbfc58fa909b8c143e660ef188794944bbb9788dd0",
+   "bytes": 4673
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/make_p4_refs.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "f18951634cad00587f13e0be857d2becf3aad74b0ce4f7ae1b809f0d5a715f68",
+   "bytes": 4682
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/make_t3_iq_slices.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "fe0822f9fd5f10a26f794a0698cae07bcf56e37dac2f0fa4489dace6adbbcea0",
+   "bytes": 3616
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/make_t3_refs.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "54789feab4b2439724ed5481a120bb3dbaf415566225d0a8d64d0acbea011b92",
+   "bytes": 4637
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/pack_engram_mxfp4.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "54e3a374d9bc0d752ee64414bb0fe15236ff8c9851d885d6c66fd06ed1b3c0f2",
+   "bytes": 4922
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/probe_completed_layer.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "d2954a8a969dc89f3ee236908599126328deb04cb27fb890f04471f37d34d1f2",
+   "bytes": 3007
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/probe_p1.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "30fc9fe04855a54157a5f90efd4f67c82b23eff1d87073716b1a3c494f84f16c",
+   "bytes": 1903
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/quality_t3.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "501ab678d1042dde0dc33da5563a0a73f4e17925cd6a0786cc944f4ae3e66234",
+   "bytes": 17035
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/run_f_prefill_refs.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "11e26287231c1b0a2d2ece6f86ce3b877de826d44fb1cd96ba0f6ba98b7b0fa0",
+   "bytes": 1291
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/run_p1.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "c6a9328e156110eb33ee2447de08cd25382e3ad493b809d8b1daafecef73091f",
+   "bytes": 1260
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/run_p2_refs.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "890ae425f54bd10621080beb8b6c4c7d6bc8686f83cc531f5af933acd5395bb2",
+   "bytes": 725
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/run_p2_testhost.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "257469c0444f775707de497f87d25c939249d7f50b4e102609973d018619c08f",
+   "bytes": 774
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/run_p3_bench_testhost.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "5dee8be85e205675e3f71e68cfec93b20d8b59957564b86b1f6291ab094b9a8a",
+   "bytes": 821
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/run_p3_layer_testhost.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "8244057147bc54b456f2301c54fabcf601f8f2de9723d021677573e9a4ed1d82",
+   "bytes": 930
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/run_p3_prefill_refs.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "fb7fd471a13a0c94bdb84bacacb3327415fa0b75af6a3b2f739f61935c3b2a46",
+   "bytes": 765
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/run_p4_testhost.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "0b2b18be9e73410340a2315cc2eaafb9e2e9caf4c640b196614cf333de01abeb",
+   "bytes": 652
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/run_t3_falsifier_testhost.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "f60b9ee6bc8bfc18282d53f24e386f7dba07a97d762eb63e1e98d8cd7cbca7bf",
+   "bytes": 2572
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/run_t3_layer_testhost.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "ad4c59b661bba1097fd8c78f611ead28a1906816352022cfa5aa7e60b1a1da4d",
+   "bytes": 2637
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/run_t3_p3_regress_testhost.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "25231bc1be373f473829dd32387c1d3b7a53eead27b3c4a8e18d1ca07e543cf3",
+   "bytes": 1402
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/run_t3_stage_testhost.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "0936abd1a18f90bd16c591f570f9e8fa671d99edf3bbee688517f6b9f1a69aa7",
+   "bytes": 2603
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/scan_p2_scales.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "6dc6dde785e2b4c75165e1f6d376127cea9bdfaa5f063acef52de5761afab153",
+   "bytes": 2411
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/sparse_tables.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "c5bd2bb638e197495b0f00c49ffe39a88f7244f70d0b832d99356273a62276ab",
+   "bytes": 3945
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/test_p3_loader_wiring.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "a9bec7d8ddb87398238b3a88703c40932ae816dc00290c5cd9f8dd88aa5e0e9f",
+   "bytes": 6122
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/test_p3_split_groups.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "95d3b2fe7f8b13396b775ef3b7109f1a4c62eb7f46c320ba34ce3ba70b653565",
+   "bytes": 3417
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/test_residency.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "7be099c66b3f4c65bdc58a03e3318960b98d57c78db97970c94abe2aa61a0f76",
+   "bytes": 1927
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/test_t3_dispatch.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "4c81aea9f136357444bf5de78ce10fa914f0d80aa8ef215fd1b8addd8a1c2686",
+   "bytes": 8306
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/test_t3_iq_bank.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "abba40a4382eca3dc8ce0dd279ab65b4f3f3c0bc90209baab1aca8646b00a6af",
+   "bytes": 4452
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/test_t3_quality.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "d24817873814103bf0ddde9bdbf4acde29c3e89bd65e1c35abc1a8d5af81093f",
+   "bytes": 8999
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/test_t3_stage_plan.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "a5fb86ee48baa0591ac259f2263ae1b3a795d7ccd00dfca35c00f9acca3fa58f",
+   "bytes": 8936
+  },
+  {
+   "path": "harness/benchmarks/nvfp4_8r/test_t3_tiers.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "635b27ef42196510c3ecdc9ef0f8cefb43c79bd9241ac0038fb57648cf09f043",
+   "bytes": 16025
+  },
+  {
+   "path": "harness/run/arm_measure.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "f6f1394096fbabe35e0251b3dfd384bdff18df218fa67a7152e48a7d7ab47c2d",
+   "bytes": 1294
+  },
+  {
+   "path": "harness/run/baseline.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "a1c1d59040b0a286428e83fbd389d7c66c7daaac7897113af42823929b2a1645",
+   "bytes": 1561
+  },
+  {
+   "path": "harness/run/copy_weights.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "1f5b0ffc1d8bfd81503e860dfe70f02af8caaebc015327a15e2c46026897e1ff",
+   "bytes": 1407
+  },
+  {
+   "path": "harness/run/ctx_tput.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "d920ec97fd69370534400c22bd98aa67c7b820014f7c4933a4c8cce5163af037",
+   "bytes": 2908
+  },
+  {
+   "path": "harness/run/harness_loop.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "80acef09c3c9e66f1fc220bd678aa1469b29d8bfe0470996fde1f2e2d42b655e",
+   "bytes": 11580
+  },
+  {
+   "path": "harness/run/harness_shape.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "05bf181d452f6be58abded3416ce9d6dc0aaa929c85b54f43f5165ff225650bd",
+   "bytes": 4651
+  },
+  {
+   "path": "harness/run/longprompt.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "4947f6a6ab265b68244be10f6bd29d567de83ca65a5cb24da573c6b969f9a8d2",
+   "bytes": 1796
+  },
+  {
+   "path": "harness/run/measure_boot.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "f601b6bfa5a93869a3938d81dfdbae16f9b1234019a8233d0683e6059afe5d31",
+   "bytes": 2026
+  },
+  {
+   "path": "harness/run/memwatch.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "3aad6428c8730161279c11e13e7cce42edf2cf539c6ef27004bbfa0ae5d22592",
+   "bytes": 467
+  },
+  {
+   "path": "harness/run/swap_arm.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "c5f7b23fbe55f172495f78c614819e5a1a46fb9be6bfd25716eae2f3dbe05020",
+   "bytes": 2312
+  },
+  {
+   "path": "harness/run/tput_prompts.py",
+   "kind": "unchanged from 79dc164",
+   "sha256": "9ebc5d46a5fc26fab00e86dbea775ac1249c7574fc91b202eb570f0c52582b21",
+   "bytes": 794
+  },
+  {
+   "path": "tools/check_data_boundary.sh",
+   "kind": "unchanged from 79dc164",
+   "sha256": "0801374c1abfe7e3a35a766fc9b12e8c66583b79e9d7680dd0ac74d07de602f6",
+   "bytes": 1717
+  }
+ ],
+ "removed": [
+  {
+   "path": "engine/configs/serve-nvfp4-pp2-t3.yaml",
+   "why": "a Volta Max uPLIft profile (three-tier)"
+  },
+  {
+   "path": "engine/configs/serve-nvfp4-pp2-t3n.yaml",
+   "why": "a Volta Max uPLIft profile (no host tier, first tally)"
+  },
+  {
+   "path": "engine/configs/serve-nvfp4-pp2-t3-a3.yaml",
+   "why": "a Volta Max uPLIft profile (three-tier, three slots)"
+  },
+  {
+   "path": "engine/configs/serve-nvfp4-pp2-t3-a1r.yaml",
+   "why": "a Volta Max uPLIft profile (three-tier, one-slot control)"
+  },
+  {
+   "path": "engine/configs/serve-nvfp4-pp2-t3n-a3.yaml",
+   "why": "a Volta Max uPLIft profile (no host tier, three slots)"
+  },
+  {
+   "path": "docs/plans/00-WHERE-TIME-GOES.md",
+   "why": "Volta Max uPLIft's plans"
+  },
+  {
+   "path": "docs/plans/01-three-tier-residency.md",
+   "why": "Volta Max uPLIft's plans"
+  },
+  {
+   "path": "docs/plans/02-reserve-and-sizing.md",
+   "why": "Volta Max uPLIft's plans"
+  },
+  {
+   "path": "docs/plans/03-dispatch-overhead.md",
+   "why": "Volta Max uPLIft's plans"
+  },
+  {
+   "path": "docs/plans/04-prefill-staging.md",
+   "why": "Volta Max uPLIft's plans"
+  },
+  {
+   "path": "docs/plans/05-miss-cache-all-native.md",
+   "why": "Volta Max uPLIft's plans"
+  },
+  {
+   "path": "docs/plans/README.md",
+   "why": "Volta Max uPLIft's plans"
+  },
+  {
+   "path": "docs/research/LANE-RESEARCH.md",
+   "why": "Volta Max uPLIft's research notes"
+  }
+ ]
+}
