@@ -3,6 +3,14 @@
 Dates are UTC. Every number is MEASURED on the 8-card host unless labelled otherwise. Details in
 [docs/measurements.md](docs/measurements.md).
 
+## 2026-11-11: multiple-choice accuracy as the closeness reference
+
+- **Measured as the reference of Volta Max uPLIft's closeness test** (MEASURED 2026-11-11, this repository's profile,
+  1,475 MHz): 83.8 % (95 % interval 80.7 % to 86.7 %) on 513 MMLU questions, greedy, thinking off, with 38 questions
+  without an answer counted as wrong. A repeat in the same boot on 50 contexts and 50 questions was identical on all
+  of them. The test, its rules, receipts and scores are in [Volta Max uPLIft](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4#how-close-to-nvfp4).
+- **Related builds** names Volta Max uPLIft's commit `c672630`, the first with the `hot_iq` launcher and profile.
+
 ## 2026-11-10: first release as its own repository
 
 - **What this is.** The two-tier mode of Volta Max uPLIft's release at commit `79dc164` (2026-11-10), published on

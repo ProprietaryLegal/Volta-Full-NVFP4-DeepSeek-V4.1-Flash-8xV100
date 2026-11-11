@@ -14,8 +14,8 @@
   {
    "path": "CHANGELOG.md",
    "kind": "rewritten for this repository from 79dc164",
-   "sha256": "c5972d11fc5e01834e9441fcb0f45bbeddd839d5cdbc688a652f7f5ef3bd9595",
-   "bytes": 1175,
+   "sha256": "e3fff0160f0508dc240899400a8084d2f1d5d6706878c67d10a543a4efba0498",
+   "bytes": 1917,
    "base_sha256": "02aaaf85137fb7ee790a0f4b5290c8ad3fd09d0f43997aa64cbe3191bba5830c"
   },
   {
@@ -54,8 +54,8 @@
   {
    "path": "README.md",
    "kind": "rewritten for this repository from 79dc164",
-   "sha256": "f6eea2a6ee0cb39658bd797c0e2d7596d85cbefa01e9e830bc13710ed3855ae2",
-   "bytes": 24509,
+   "sha256": "9c6393524aa75bc076d17092fb8df34100816397666873ecbabbf709e3da6595",
+   "bytes": 25489,
    "base_sha256": "fb12ff917a4778da80a23d98f66de923dc51b5495dcb31661763862296dae216"
   },
   {
@@ -74,8 +74,8 @@
   {
    "path": "docs/measurements.md",
    "kind": "rewritten for this repository from 79dc164",
-   "sha256": "5475aea91ae3b44a2f22da88e0b3159af6426830cacea23009d7fa6f2dee3931",
-   "bytes": 10032,
+   "sha256": "8b1ba759b68d3ccd658f681a7e1b2ea722fdbfb77a595fbef65d601fadfe4f3f",
+   "bytes": 10564,
    "base_sha256": "8047eeeaaec8f17564d1ab25711901a7707543fd2478da556a562db04999e20c"
   },
   {

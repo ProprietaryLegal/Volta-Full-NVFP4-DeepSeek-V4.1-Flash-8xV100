@@ -15,6 +15,7 @@ Newest first. A later arm is one more row at the top, with its details in a sect
 
 | Date | Build or profile | Test | Result | Receipt |
 |---|---|---|---|---|
+| 2026-11-11 | two-tier (this build's profile), the reference of Volta Max uPLIft's closeness test | 513 MMLU questions, greedy, thinking off | accuracy 83.8 % (95 % interval 80.7 % to 86.7 %), 38 without an answer counted as wrong. Repeat on 50 contexts and 50 questions in the same boot: identical on all of them, 1,475 MHz | published with [the test](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4#how-close-to-nvfp4) in Volta Max uPLIft (`quality/closeness-test/`) |
 | 2026-11-09 | two-tier, a later boot on the engine with the three-tier changes | short set, general | 18.3 tok/s over the whole request, with 178.95 ms per round and 3.32 tokens per round in decode | `baseline/t3-N2a-g1-tput.out` |
 | 2026-11-09 | two-tier, Volta sPLIt | short sets, context rows, long prompts, harness-shaped test | the sections below | private boot receipts of the same day |
 

@@ -152,7 +152,8 @@ repeated token for token on a second capture in the same boot (MEASURED 2026-11-
 
 **Upstream accuracy.** NVIDIA's own accuracy table for the pack, measured with vLLM on 4x GB300 (UPSTREAM), is within
 run noise of the MXFP4 source, for example GPQA-D 92.93 against 92.77 and AA-LCR 80.19 against 80.41. Those figures
-are NVIDIA's, on NVIDIA's serving stack, not this build. No benchmark score of this build is published here.
+are NVIDIA's, on NVIDIA's serving stack, not this build. This build's own multiple-choice accuracy, measured as the
+reference of Volta Max uPLIft's closeness test, is a dated row of the [measurement log](#measurement-log).
 
 ## Measurement log
 
@@ -161,6 +162,7 @@ Details: [docs/measurements.md](docs/measurements.md).
 
 | Date | Build or profile | Test | Result | Basis |
 |---|---|---|---|---|
+| 2026-11-11 | Volta Full NVFP4 (its profile `serve-nvfp4-pp2.yaml`), the reference of Volta Max uPLIft's closeness test | 513 MMLU questions, greedy, thinking off | accuracy 83.8 % (95 % interval 80.7 % to 86.7 %), 38 questions without an answer counted as wrong. A repeat in the same boot on 50 contexts and 50 questions was identical on all of them ([the test](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4#how-close-to-nvfp4)) | MEASURED, 1,475 MHz |
 | 2026-11-09 | Volta Full NVFP4, a later boot on the engine with the three-tier changes | short set, general | 18.3 tok/s (178.95 ms per round) against 18.8 tok/s (174.64 ms) on the first run: 2.5 % per round, inside the 6.5 % within-boot noise | MEASURED |
 | 2026-11-09 | Volta Full NVFP4 | 498,099-token prompt | 274.9 s (reserves 6 / 9 GiB), 326.6 s (4.5 / 7.5 GiB), no out-of-memory error | MEASURED |
 | 2026-11-09 | Volta Full NVFP4 | one chat, 216K-token public prompt, four requests | first token 134.3 to 140.0 s. Every follow-up re-read the whole prompt, which is the test's own doing ([details](docs/measurements.md#harness-shaped-tests)) | MEASURED |
@@ -233,11 +235,11 @@ Same model, same eight cards, same engine.
 | Build | Routed experts | Serving profile |
 |---|---|---|
 | Volta Full NVFP4 (this repository) | every routed expert at exactly NVIDIA's NVFP4 precision, the most-used on the cards and the rest served from host RAM over PCIe | `serve-nvfp4-pp2.yaml` in [engine/configs/](engine/configs/) |
-| [Volta Max uPLIft](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) | as much of NVIDIA's NVFP4 as fits with every routed expert on the cards, the rest from IQ2-class records. Faster than this build | `hot_iq.yaml.template` and `serve_hot_iq.sh`, in that repository's `engine/configs/` from the first commit after `79dc164` |
+| [Volta Max uPLIft](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4) | as much of the routed work at NVIDIA's NVFP4 precision as fits, every routed expert on the cards in decode, the rest from IQ2-class records. Faster than this build | `hot_iq.yaml.template` and `serve_hot_iq.sh`, in that repository's `engine/configs/` from commit [`c672630`](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/commit/c6726309d03171f6fa77076371c9ac11879d086a) |
 | [Volta sPLIt](https://github.com/ProprietaryLegal/Volta-sPLIt-DeepSeek-V4.1-Flash-1017-8xV100-SXM2-PP2xTP4) | every routed expert from a compressed IQ2-class record, all on the cards. The fastest of the three | in its own repository |
 
-This repository's engine is Volta Max uPLIft's as released at commit `79dc164`. Volta Max uPLIft's later commits
-carry the current engine, which adds the reader for its package's tier map.
+This repository's engine is Volta Max uPLIft's as released at commit `79dc164`. From commit [`c672630`](https://github.com/ProprietaryLegal/Volta-Max-uPLIft-FP4-DeepSeek-V4.1-Flash-1017-NVFP4-8xV100-SXM2-PP2xTP4/commit/c6726309d03171f6fa77076371c9ac11879d086a) on, Volta Max
+uPLIft carries the current engine, which adds the reader for its package's tier map.
 
 ## Work with PLI Labs
 
