@@ -145,3 +145,17 @@ Volta sPLIt, tool loop (`harness_loop.py`, Anthropic Messages API format, thinki
 ESTIMATED from the miss-path rows and the tally (6 tokens x top-6 per round, independent tokens, 1.33 distinct
 host experts per layer per round on average): all experts on the cards 36.1 ms per round; zero copy 96.9; DMA 69.8 to
 79.8; GPU gather 84.8 to 94.8; host compute 190 to 200. No path comes within about 10 ms per round of all on the cards.
+
+## Figures from the front page (2026-11-19)
+
+The front page was rewritten on 2026-11-19. These figures were given only there and are kept here with their labels.
+
+| What | Figure | Label |
+|---|---|---|
+| Host memory | 363 GiB available with no server running; the host-RAM experts take about 101 GB | MEASURED; ESTIMATE from the tier counts |
+| PCIe layout of the eight-card host | four PLX switches, each on its own x16 Gen3 root port, two cards per switch at Gen3 x8 | MEASURED from sysfs |
+| ISTA-DASLab GSQ-RCO GGUF, non-expert tensors by tensor bytes | Q5_K 4.76 GiB, Q8_0 0.36 GiB, BF16 0.26 GiB, F32 0.15 GiB | MEASURED from the file header |
+| Routed experts at the official MXFP4 precision | about 269 GiB: 384 x 35.4M weights x 40 x 4.25 / 8 bytes | ESTIMATE |
+| Packs | 299,473,305,600 bytes, W2 padded from K=576 to 640 for the kernel | MEASURED |
+| MXFP4 Engram from NVIDIA's pack | 144-byte rows, 110,595,290,400 bytes | MEASURED |
+| One host-RAM expert per token at 1 row | adds about 975 us to a layer (1,127.81 less 152.45 us); at 6 rows about 3.5 to 4.9 GB/s over PCIe | ARITHMETIC from the single-card rows |
